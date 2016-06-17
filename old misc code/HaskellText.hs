@@ -40,7 +40,7 @@ getBlocks = map mkBlock . drop 1 . B.split '>' <$> B.getContents
    where 
       mkBlock bs1 = Block h t
         where (h, t) = B.break (== '\n') bs1
-  
+   
 
 reverseComplement :: Block -> Block
 reverseComplement (Block name codes) = 
